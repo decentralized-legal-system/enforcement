@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "canisters": {
+    "enforcement_backend": {
+      "type": "rust",
+      "package": "enforcement_backend",
+      "candid": "src/enforcement_backend/enforcement_backend.did"
+    },
+    "enforcement_frontend": {
+      "type": "assets",
+      "source": [
+        "src/enforcement_frontend/assets"
+      ],
+      "dependencies": [
+        "enforcement_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "output_env_file": ".env"
+}
